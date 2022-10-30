@@ -1,5 +1,6 @@
 import fetch from "node-fetch";
 import { parse } from "node-html-parser";
+import { convert } from "html-to-text";
 import fs from "fs";
 
 const BASE = "https://digital-dojo-engagement-main.bdm-dev.dts-stn.com";
@@ -16,7 +17,7 @@ async function getPage(href) {
   let res = await fetch(`${BASE}${href}`);
   return {
     href,
-    text: await res.text(),
+    text: convert(await res.text()),
   };
 }
 
@@ -27,3 +28,5 @@ async function main() {
     if (err) console.log(err);
   });
 }
+
+main();

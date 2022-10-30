@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "html-to-text": "^8.2.1",
     "node-fetch": "^3.2.10",
     "node-html-parser": "^6.1.1"
   }
