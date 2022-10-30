@@ -4,12 +4,12 @@
   "description": "",
   "main": "index.js",
   "type": "module",
-  "scripts": {},
   "keywords": [],
   "author": "",
   "license": "ISC",
   "scripts": {
-    "build":"node index.js"
+    "build": "node index.js",
+    "postbuild": "node findPage.js"
   },
   "dependencies": {
     "html-to-text": "^8.2.1",
